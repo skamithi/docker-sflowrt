@@ -17,7 +17,11 @@ RUN /usr/bin/wget -P /tmp http://www.inmon.com/products/sFlow-RT/sflow-rt_2.0-10
 # Install sflow-rt
 RUN /usr/bin/dpkg -i /tmp/sflow-rt_2.0-1072.deb
 
-CMD /etc/init.d/sflow-rt start
+# Install exec script
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
+
+CMD  ["/run.sh"]
 
 EXPOSE 8008
 

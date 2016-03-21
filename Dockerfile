@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 # File Author/Maintainer
-MAINTAINER Stanley Karunditu
+MAINTAINER LinuxSimba
 
 # Update the repository sources list
 RUN apt-get update
